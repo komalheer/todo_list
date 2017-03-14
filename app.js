@@ -9,7 +9,7 @@ function getList() {
 }
  
 function addItem() {
-	var todos = get_list();
+	var todos = getlist();
     todos.push(document.getElementById('addTodoItem').value);
     localStorage.setItem('todo', JSON.stringify(todos));
  
