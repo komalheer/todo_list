@@ -1,17 +1,17 @@
-function get_todos() {
-    var todos = [];
-    var todos_str = localStorage.get_todos('todo');
-    if (todos_str !== null) {
-        todos = JSON.parse(todos_str); 
+function getList() {
+    var list = [];
+    var list_str = localStorage.getItem('todo');
+    if (list_str !== null) {
+        list = JSON.parse(list_str); 
     }
-    return todos;
-	
+    return list;
+    
 }
  
 function addItem() {
-	var todos = get_todos();
-    todos.push(document.getElementById('addTodoItem').value);
-    localStorage.setItem('todo', JSON.stringify(todos));
+    var list = getList();
+    list.push(document.getElementById('addTodoItem').value);
+    localStorage.setItem('todo', JSON.stringify(list));
  
     showInput();
  
@@ -20,9 +20,9 @@ function addItem() {
  
 function deleteItem() {
  
-    var todos = get_todos();
-    todos.splice(this.getAttribute('id'), 1);
-    localStorage.setItem('todo', JSON.stringify(todos));
+    var list = getList();
+    list.splice(this.getAttribute('id'), 1);
+    localStorage.setItem('todo', JSON.stringify(list));
  
 
     showInput();
@@ -31,13 +31,13 @@ function deleteItem() {
 }
  
 function showInput() {
-	
-    var todos = get_todos();
+    
+    var list = getList();
  
     var html = '<ol>';
-    for(var j=0; j<todos.length; j++) {
-        html += '<li >' + todos[j] + '<button class="deleteItem" id="' + j  + '">Delete</button></li>';
-		
+    for(var j=0; j<list.length; j++) {
+        html += '<li >' + list[j] + '<button class="deleteItem" id="' + j  + '">Delete</button></li>';
+        
     };
     html += '</ol>';
  
@@ -46,14 +46,14 @@ function showInput() {
     for (var j=0; j < buttonDelete.length; j++) {
         buttonDelete[j].addEventListener('click', deleteItem);
     };
-	
-	
+    
+    
  var addlist = document.querySelector('OL');
 addlist.addEventListener('click', function(strikeItem) {
   if (strikeItem.target.tagName === 'LI') {
-	
+    
    strikeItem.target.classList.toggle('checked');
-	
+    
   }
 });
 
@@ -61,6 +61,6 @@ addlist.addEventListener('click', function(strikeItem) {
  
 document.getElementById('addTodo').addEventListener('click', addItem);
 showInput();
-	document.getElementsByClassName('checked');
-	
-	
+    document.getElementsByClassName('checked');
+    
+    
