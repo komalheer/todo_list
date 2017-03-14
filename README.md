@@ -1,0 +1,1 @@
+This is todo list app with the help of local storage
