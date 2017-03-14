@@ -1,0 +1,32 @@
+Arithmatic Calculator:
+
+My final project will be a calculator which will perfrom basic mathematical functions i.e 
+'addition', 'subtraction', 'multiplication' and 'division'. 
+It will be a web app that will use HTML, CSS and Javascript for functioning.
+Further, this app can be expanded to scientific calculator which can perform scientific functions 
+like square root, square etc.
+Moreover, it can be upgraded to polynomial calculator.
+Obviously, this calculator will be helpful to every student and other people.
+It will be deployed using Netlify or surge but basically Netlify.
+Also, It can be made a node app which can run on terminal.
+I am making this calculator because mathematics is day-to-day part of our life.
+
+
+
+Age Calculator App:
+
+Another idea can be age calculator app which will calculate the age hours, minutes
+and seconds.
+The user needs to enter his/her date of birth and the app will convert the age to 
+hours, minutes and seconds.
+
+
+Calorie Calculator App:
+
+Another Idea is a calorie calculator app will calculate the daily amount of calorie required 
+by a person.
+The app will calculate the calorie required according to age, height, weight and gender.
+I want to develop this app because people are becoming more fitness freak.
+Moreover, this app can be upgraded to diet planner tooin future. For example, According to the need of the 
+user, app can provide the daily diet plan.
+It will use HTML, CSS and Javascript.
