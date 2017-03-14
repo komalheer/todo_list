@@ -1,4 +1,4 @@
-function get_todos() {
+function getList() {
     var todos = [];
     var todos_str = localStorage.getItem('todo');
     if (todos_str !== null) {
@@ -9,7 +9,7 @@ function get_todos() {
 }
  
 function addItem() {
-	var todos = get_todos();
+	var todos = get_list();
     todos.push(document.getElementById('addTodoItem').value);
     localStorage.setItem('todo', JSON.stringify(todos));
  
@@ -20,7 +20,7 @@ function addItem() {
  
 function deleteItem() {
  
-    var todos = get_todos();
+    var todos = getList();
     todos.splice(this.getAttribute('id'), 1);
     localStorage.setItem('todo', JSON.stringify(todos));
  
@@ -32,7 +32,7 @@ function deleteItem() {
  
 function showInput() {
 	
-    var todos = get_todos();
+    var todos = getList();
  
     var html = '<ol>';
     for(var j=0; j<todos.length; j++) {
