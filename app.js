@@ -1,6 +1,6 @@
 function get_todos() {
     var todos = [];
-    var todos_str = localStorage.getItem('todo');
+    var todos_str = localStorage.get_todos('todo');
     if (todos_str !== null) {
         todos = JSON.parse(todos_str); 
     }
